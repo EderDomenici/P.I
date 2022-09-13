@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/public/navBar.css">
+    <link rel="stylesheet" href="/stylesheets/public/navbar.css">
+    <link rel="stylesheet" href="/stylesheets/public/search.css">
+    <link rel="stylesheet" href="/stylesheets/public/footer.css">
+    <script src="/javascripts/login.js" defer></script>
+    <script src="https://kit.fontawesome.com/794f38cff9.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="/img/Logo@2x.png" id='logo' alt="Logo">
+            </li>
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Buscar...">
+            </div>
+            <li>
+                <div class='ball'><i class="fa-solid fa-user"></i></div>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+        </ul>
+    </nav>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://localhost:3000/'>Home</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Produtos</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Smartphone</a></li>
+              <li><a href='http://'>Acessórios</a></li>
+              <li><a href='http://'>Tablet</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Ofertas</a></li>
+          <li><a href='http://'>Categoria</a></li>
+        </ul>
+      </nav>
+    <main>
+        <div class="id">
+                <h1><i class="fa-solid fa-user"></i>Login</h1>
+        </div>
+        <div class="margin">
+                    <section class="formLogin">
+                        <div class="mail">
+                            <div class="login">
+                            <div class="inputForm">
+
+                                <form action="/customer/" method="post">
+                                      <input id="enter" type="email" name="email" placeholder="E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                            </div>
+                            </div>
+                            <div class="inputBox">
+                                <input type="password" name="password" placeholder="Senha" id="password">
+                                <div><i id="toggle" class="fa-solid fa-eye"></i></div>
+                            </div>
+
+                            <div id="botaoLogin">
+                            <button id="botaoLogin" type="submit" class="botaoId">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                                <p>Entrar</p>
+                            </button>
+                        </form>
+                            </div>
+                            <div class="esquecimento">
+                            <div id="esqueciEmail" class="esqueciES"><a href="http://localhost:3000/customer/new">Criar cadastro</a></div>
+                            <div id="esqueciSenha" class="esqueciES">Esqueci a minha Senha</div>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </main>
+    </body>
+    <footer>
+        <img src="/img/Logo@2x.png" alt="">
+        <div class="info">
+            <span>DH - Digital House</span>
+            <span>Av. Domingos Odália Filho, 301, Osasco - SP</span>
+            <span>(11) 4858-4656</span>
+            <span>alunos@digitalhouse.com</span>
+        </div>
+        <div class="info" id="info">
+            <p>Quem somos nós</p>
+            <p>Nossas redes sociais:</p>
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho</title>
+
+  <link rel="stylesheet" href="/public/stylesheets/cart.css">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1 class="heading">
+      <ion-icon name="cart-outline"></ion-icon> Carrinho
+    </h1>
+
+    <div class="item-flex">
+
+      <section class="cart">
+
+        <div class="cart-item-box">
+
+          <h2 class="section-heading">Resumo do Pedido</h2>
+
+          <div class="product-card">
+
+            <div class="card">
+
+              <div class="img-box">
+                <img src="../public/img/products/ps5.PNG" alt="PlayStation 5 825GB" width="80px" class="product-img">
+              </div>
+
+              <div class="detail">
+
+                <h4 class="product-name">PlayStation 5 825GB 1 Controle Branco Sony - com Horizon Forbidden West</h4>
+
+                <div class="wrapper">
+
+                  <div class="product-qty">
+                    <button id="decrement">
+                      <ion-icon name="remove-outline"></ion-icon>
+                    </button>
+
+                    <span id="quantity">1</span>
+
+                    <button id="increment">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="price">
+                    R$ <span id="price">4.512,41</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="product-card">
+
+            <div class="card">
+
+              <div class="img-box">
+                <img src="../public/img/products/celular.PNG" alt="Smartphone Motorola Moto G22" width="80px" class="product-img">
+              </div>
+
+              <div class="detail">
+
+                <h4 class="product-name">Smartphone Motorola Moto G22, 128GB, Preto, 4G, Tela 6,5" IPS 90Hz, Câmera Quadrupla 50MP, Selfie 16MP, Dual Chip, Android 12</h4>
+
+                <div class="wrapper">
+
+                  <div class="product-qty">
+                    <button id="decrement">
+                      <ion-icon name="remove-outline"></ion-icon>
+                    </button>
+
+                    <span id="quantity">1</span>
+
+                    <button id="increment">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </button>
+                  </div>
+
+                  <div class="price">
+                    R$ <span id="price">1.160,10</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <button class="product-close-btn">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="wrapper">
+
+          <div class="amount">
+
+            <div class="subtotal">
+              <span>Subtotal</span> <span>$ <span id="subtotal">4.513,57</span></span>
+            </div>
+
+            <div class="tax">
+              <span>Taxa</span> <span>$ <span id="tax">0.10</span></span>
+            </div>
+
+            <div class="shipping">
+              <span>Envio</span> <span>$ <span id="shipping">0.00</span></span>
+            </div>
+
+            <div class="total">
+              <span>Total</span> <span>$ <span id="total">4.513,57</span></span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <script src="/public/stylesheets/cart.css"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

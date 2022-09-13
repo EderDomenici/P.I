@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/button.css">
+    <link rel="stylesheet" href="/stylesheets/records.css">
+    <link rel="stylesheet" href="/stylesheets/modal.css">
+    <link rel='stylesheet' href='/stylesheets/NavBar.css'>
+    <link rel='stylesheet' href='/stylesheets/footer.css'>
+    <script src="https://kit.fontawesome.com/794f38cff9.js" crossorigin="anonymous"></script>
+    <script src="/javascripts/rProduct.js" defer></script>
+    <title>Cadastrar Produtos</title>
+  </head>
+  <body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Home</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Produtos</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Smartphone</a></li>
+              <li><a href='http://'>Acessórios</a></li>
+              <li><a href='http://'>Tablet</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Ofertas</a></li>
+          <li><a href='http://'>Suporte</a></li>
+        </ul>
+      </nav>
+    <header>
+      <h1 class="header-title">Cadastro de Produtos</h1>
+  </header>
+  <main>
+    <form>
+    <div class="button-header">
+      <button type="button" class="button blue mobile" id="cadastrarProduto">Cadastrar Produto</button>
+      <button type="button" class="button blue mobile" id="cadastrarCategoria">Cadastrar Categoria</button>
+      <button type="button" class="button blue mobile" id="cadastrarMarca">Cadastrar Oferta</button>
+      <input type="text" class='searchProducts' id="search-form" placeholder="Search..">
+      <button type="submit" class="button blue mobile" id="lupa"><i class="fa-brands fa-searchengin"></i></button>
+    </form>
+    </div>
+      <table id = "tbProduct" class="records">
+          <thead>
+              <tr>
+                  <th>Nome</th>
+                  <th>Preço</th>
+                  <th>Peso</th>
+                  <th>Tamanho</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Quantia</th>
+                  <th>Descrição</th>
+                  <th>Cor</th>
+                  <th>Segue</th>
+                  <th>Categoria</th>
+                  <th>Imagem</th>
+                  <th>Ação</th>
+
+
+              </tr>
+          </thead>
+          <tbody>
+            <% for (let i = 0; i < prod.length; i++) { %>
+              <tr>
+                  <td><%= prod[i].name %></td>
+                  <td><%= prod[i].price %></td>
+                  <td><%= prod[i].weight %></td>
+                  <td><%= prod[i].size %></td>
+                  <td><%= prod[i].brandID %></td>
+                  <td><%= prod[i].model %></td>
+                  <td><%= prod[i].amount %></td>
+                  <td><%= prod[i].description %></td>
+                  <td><%= prod[i].color %></td>
+                  <td><%= prod[i].follow %></td>
+                  <td><%= prod[i].categoryId %></td>
+                  <td><img src="https://picsum.photos/100/130"></td>
+                  <td>
+                    <button type="submit" class="button green">editar</button>
+                    <button class="button red" value="<%= prod[i].id %>" onclick="chamarFetch(value)">Excluir</button>
+                  </td>
+              </tr>
+            <% } %>
+          </tbody>
+      </table>
+      <div class="modal" id="modal">
+          <div class="modal-content">
+              <header class="modal-header">
+                  <h2>Novo Produto</h2>
+                  <span class="modal-close" id="modalClose">&#10006;</span>
+              </header>
+              <form id="form" class="modal-form" action="/adm/product" method="post">
+                  <input type="text" name="name" id="nome" data-index="new" class="modal-field-large" placeholder="Nome do Produto" required>
+                  <input type="text" name="price" id="preco" class="modal-field" placeholder="Preço" required>
+                  <input type="text" name="weight" id="peso" class="modal-field" placeholder="Peso" required>
+                  <input type="text" name="categoryId" id="categoria" class="modal-field" placeholder="Categoria" required>
+                  <input type="text" name="size" id="tamanho" class="modal-field" placeholder="Tamanho" required>
+                  <input type="text" name="brandID" id="marca" class="modal-field" placeholder="Marca" required>
+                  <input type="text" name="model" id="modelo" class="modal-field" placeholder="Modelo" required>
+                  <input type="text" name="amount" id="quantia" class="modal-field" placeholder="Quantia" required>
+                  <input type="text" name="description" id="descricao" class="modal-field" placeholder="Descrição" required>
+                  <input type="text" name="color" id="cor" class="modal-field" placeholder="Cor" required>
+                  <input type="text" name="follow" id="segue" class="modal-field" placeholder="Segue" required>
+                  <!-- <input type="file" name="image" id="imagem" class="modal-field-large" placeholder="Imagem" required> -->
+                  <footer class="modal-footer">
+                      <button type="submit" id="salvar"class="button green">Salvar</button>
+                      <button id="cancelar"class="button blue">Cancelar</button>
+                  </footer>
+
+              </form>
+          </div>
+      </div>
+
+  <!-- Modal Categoria-->
+
+       <div class="modal" id="modalCat">
+         <div class="modal-content">
+            <header class="modal-header">
+              <h2>Nova Categoria</h2>
+                <span class="modal-close" id="modalCloseCat">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form" action="/adm/category" method="post">
+                 <input type="text" name="name" id="nome" data-index="new" class="modal-field-large" placeholder="Nome da Categoria" required>
+                <footer class="modal-footer">
+                 <button type="submit" id="salvar"class="button green">Salvar</button>
+                 <button id="cancelar"class="button blue">Cancelar</button>
+                  </footer>
+
+                  </form>
+            </div>
+        </div>
+
+        <div class="modal" id="modalMar">
+            <div class="modal-content">
+               <header class="modal-header">
+                 <h2>Novo Marca</h2>
+                   <span class="modal-close" id="modalCloseMar">&#10006;</span>
+                   </header>
+                   <form id="form" class="modal-form" action="/adm/product" method="post">
+                    <input type="text" name="name" id="nome" data-index="new" class="modal-field-large" placeholder="Oferta" required>
+                   <footer class="modal-footer">
+                    <button type="submit" id="salvar"class="button green">Salvar</button>
+                    <button id="cancelar"class="button blue">Cancelar</button>
+                     </footer>
+
+                     </form>
+               </div>
+           </div>
+
+
+
+  </main>
+  <footer>
+      <img src="/img/Logo.png" alt="">
+      <div class="info">
+          <span>DH - Digital House</span>
+          <span>Av. Domingos Odália Filho, 301, Osasco - SP</span>
+          <span>(11) 4858-4656</span>
+          <span>alunos@digitalhouse.com</span>
+      </div>
+
+      <div class="info" id="info">
+          <p>Quem somos nós</p>
+          <p>Nossas redes sociais:</p>
+          <div class="social_media">
+              <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-square fa-xl"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+          </div>
+      </div>
+  </footer>
+      <script>
+        function chamarFetch(id){
+          fetch(`http://localhost:3000/adm/product/${id}`, {method: "delete"})
+
+          .then( res =>
+          document.location.reload(true)
+        )
+        .catch ( e =>
+         console.log(e))
+
+        }
+      </script>
+  </body>
+  </html>

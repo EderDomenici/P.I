@@ -1,0 +1,125 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+}
+
+nav
+{
+  background-image: linear-gradient(#4acee6,rgba(74, 206, 210, 0));
+}
+
+input
+{
+  font-size:1rem;
+  border-color:#cccccc;
+  padding:0.75rem; border-width:0.125rem;
+  border-radius:0.813rem; border-style:solid;
+  text-shadow:0px 0px 0px #2a2a2abd;
+  box-shadow: 0px 0px 0.313rem 0px #50cee6;
+}
+
+button
+{
+  display: flex;
+  justify-content: center;
+  left: 3.125rem;
+}
+
+ul, li
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.313rem;
+  text-decoration: none;
+}
+
+.margin {
+  margin: 0.313rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0%;
+  flex-direction: row;
+}
+
+.margin2 {
+  margin: 0.313rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0%;
+  flex-direction: row;
+}
+
+section
+{
+    font-size:1rem;
+    position: relative;
+    border-color:#cccccc;
+}
+
+.inputForm
+{
+    font-size:1rem;
+    border-color:#cccccc;
+    padding:0.75rem; border-width:0.125rem;
+    border-radius:0.813rem; border-style:solid;
+    text-shadow:0px 0px 0px #2a2a2abd;
+    box-shadow: 0px 0px 0.313rem 0px #50cee6;
+}
+
+.row1
+{
+    position: relative;
+    display: flex;
+    width: 80%;
+    padding: 0.313rem;
+    margin: 0.188rem;
+    align-items: center;
+    justify-content: center;
+    left: 5.625rem;
+
+}
+
+.fa-solid .fa-eye
+{
+  width: 0.875rem;
+  height: 0.875rem;
+  fill: none;
+  border: none;
+}
+
+.senhaOlho
+{
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.senhaOlho2
+{
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#toggle {
+  position: relative;
+  top: 0.313rem;
+  right: 2.3rem;
+  transform: translateY(-50%);
+}
+
+#toggle:active
+{
+  color: #3b476b;
+  cursor: pointer;
+  background-size: cover;
+}
+

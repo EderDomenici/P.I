@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: "PI_DB"
+
+    image: mysql
+    env_file:
+      - .env
+    environment:
+
+      MYSQL_USER: "wave"
+      MYSQL_DATABASE: "pi"
+      # MYSQL_ROOT_PASSWORD:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+
+    ports:
+      - '3306:3306'
+    volumes:
+      - D:\Digital House\P.I
+    networks:
+      - mysql-compose-network
+      - /home/$USER/Docker/volumes/demo:/var/lib/mysql
+
+networks:
+  network:
+    driver: bridge

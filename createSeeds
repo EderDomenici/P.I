@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Create model Customer
+npx sequelize-cli seed:generate --name seedCustomer
+# Create model Credit Card
+npx sequelize-cli seed:generate --name seedseedCreditCard
+
+# Create model Category
+npx sequelize-cli seed:generate --name seedCategory
+
+# Create model Product
+npx sequelize-cli seed:generate --name seedProduct
+
+# Create model Specification
+npx sequelize-cli seed:generate --name seedSpecification
+
+# Create model Brand
+npx sequelize-cli seed:generate --name seedBrand
+
+# Create model Order Status
+npx sequelize-cli seed:generate --name  seedOrderStatus
+
+# Create model Shippment Status
+npx sequelize-cli seed:generate --name  seedShippmentStatus
+
+#Create model Payment
+npx sequelize-cli seed:generate --name  seedPayment
+
+# Create model Order
+npx sequelize-cli seed:generate --name  seedOrder
+
+# Create model Inventory
+npx sequelize-cli seed:generate --name seedInventory
+
+
+
+
+
+
+
+

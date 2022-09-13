@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/profile.css">
+    <link rel="stylesheet" href="../public/stylesheets/public/footer.css">
+    <link rel="stylesheet" href="../public/stylesheets/public/navbar.css">
+    <link rel="stylesheet" href="../public/stylesheets/public/search.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/794f38cff9.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./profile.js" defer></script>
+    <title>profile</title>
+</head>
+<nav>
+    <ul>
+        <li>
+            <img src="../public/img/Logo@2x.png" id='logo' alt="Logo">
+        </li>
+        <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Buscar...">
+        </div>
+        <li>
+            <div class='ball'><a href='http://localhost:3000/customer'><i class="fa-solid fa-user"></i></a></div>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </li>
+    </ul>
+</nav>
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+    <ul>
+      <li><a href='http://'>Home</a></li>
+      <li><a class='dropdown-arrow' href='http://'>Produtos</a>
+        <ul class='sub-menus'>
+          <li><a href='http://'>Smartphone</a></li>
+          <li><a href='http://'>Acessórios</a></li>
+          <li><a href='http://'>Tablet</a></li>
+        </ul>
+      </li>
+      <li><a href='http://'>Ofertas</a></li>
+      <li><a href='http://'>Categoria</a></li>
+    </ul>
+  </nav>
+
+    <main>
+               <div class="usuario-bv">
+                  <span>Bem Vindo,<%= user.name %></span><br>
+                  <span><ion-icon name="mail-outline"></ion-icon><%= user.email %></span>
+               </div>
+
+           <div>
+               <h4>SEU ULTIMO PEDIDO</h4>
+               <h4><ion-icon name="cart-outline"></ion-icon>SEU ULTIMO PEDIDO</h4>
+           </div>
+
+           <div class="pedido-status">
+               <div>
+                   <span>NÚMERO DO PEDIDO</span>
+               <div class="div-status">
+                   <div>
+                       <span>SEU PEDIDO PEDIDO</span>
+                   </div>
+
+                   <div>
+                       <span></span>
+                   </div>
+               </div>
+
+               <div>
+                   <span>STATUS</span>
+               <div class="div-status">
+                   <div>
+                       <span>STATUS</span>
+                   </div>
+
+                   <div>
+                     <span>CONCLUIDO</span>
+                  </div>
+               </div>
+
+               <div>
+                   <span>DATA</span>
+               <div class="div-status">
+                   <div>
+                       <span>DATA</span>
+                    </div>
+
+                    <div>
+                        <span>10/10/2010</span>
+                    </div>
+
+               </div>
+
+               <div>
+                   <span>PAGAMENTO</span>
+               <div class="div-status">
+                   <div>
+                       <span>PAGAMENTO</span>
+                   </div>
+
+                   <div>
+                    <span>cartão/dinheiro</span>
+                   </div>
+
+               </div>
+           </div>
+
+                <h4>Endereço</h4>
+
+           <div class="endereco">
+
+               <div>
+               <div class="endereco-div">
+                   <div>
+                       <span><%= user.address %></span>
+                   </div>
+     </main>
+     <footer>
+        <img src="./public/img/Logo@2x.png" alt="">
+        <div class="info">
+            <span>DH - Digital House</span>
+            <span>Av. Domingos Odália Filho, 301, Osasco - SP</span>
+            <span>(11) 4858-4656</span>
+            <span>alunos@digitalhouse.com</span>
+        </div>
+    
+        <div class="info" id="info">
+            <p>Quem somos nós</p>
+            <p>Nossas redes sociais:</p>
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+ </body>
+ </html>

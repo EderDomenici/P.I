@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/cadastro.css">
+    <link rel="stylesheet" href="/stylesheets/public/search.css">
+    <link rel="stylesheet" href="/stylesheets/public/footer.css">
+    <link rel="stylesheet" href="/stylesheets/public/navbar.css">
+    <link rel="stylesheet" href="/stylesheets/public/btn.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;700&display=swap" rel="stylesheet">
+    <script src="/javascripts/login.js" defer></script>
+    <script src="/javascripts/checkCep.js" defer></script>
+    <script src="https://kit.fontawesome.com/794f38cff9.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="/img/Logo@2x.png" id='logo' alt="Logo">
+            </li>
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Buscar...">
+            </div>
+            <li>
+                <div class='ball'><a href='http://localhost:3000/customer'><i class="fa-solid fa-user"></i></a></div>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+        </ul>
+    </nav>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Home</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Produtos</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Smartphone</a></li>
+              <li><a href='http://'>Acessórios</a></li>
+              <li><a href='http://'>Tablet</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Ofertas</a></li>
+          <li><a href='http://'>Categoria</a></li>
+        </ul>
+      </nav>
+    <main>
+        <div class="id">
+                <i class="fa-solid fa-user"></i>
+                <h1>Identificação </h1>
+        </div>
+        <div class="margin">
+                <div class="separacao">
+                    <section class="personalData">
+                        <form action="/customer/new" method="post">
+                        <h2>Dados Pessoais</h2>
+                        <div class="name">
+                            <div class="nameID">
+                            <div class="empty">
+                                <input class="inputForm" type="text" name="name" id="inputName" value placeholder="Nome">
+                            </div>
+                            </div>
+                            <div class="nameID">
+                                <div class="empty">
+                                    <input class="inputForm" type="text" name="lastName" id="inputName" value placeholder="Sobrenome">
+                                </div>
+                                </div>
+
+                                <div class="inputBox">
+                                    <input class="inputForm" type="text" name="cpf" id="inputCpf" value placeholder="CPF">
+                                </div>
+                                <div class="inputBox">
+                                    <input class="inputForm" type="email" name="email" id="inputEmail" value placeholder="Email">
+                                </div>
+                                
+                                <div>
+                                    <input type="password" name="password" placeholder="Senha" id="password">
+                                    <i id="toggle" class="fa-solid fa-eye"></i>
+                                </div>
+
+                            <div class="senha">
+                            </div>
+                            <div id="birthday">
+                          <div class="empty">
+                            <input class="inputForm" type="date" id="inputBirthday" name="birthDay" value placeholder="Data de Nascimento">
+                          </div>
+                            </div>
+                            <div id="phone">
+                                <div class="empty">
+                                    <input class="inputForm" type="tel" id="phone" name="phone" value placeholder="Telefone">
+                                </div>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        <div class="divisoria"></div>
+        <div class="margin2">
+        <section id="endereco" class="enderecoCadastro">
+            <h2>Endereço de Cadastro</h2>
+            <div class="inputbox">
+                <input class="inputForm" type="text" name="cep" id="cep" placeholder="Cep" required>
+                <label for="cep"></label>
+            </div>
+            <div class="inputbox">
+                <input class="inputForm" type="text" name="address" id="address" placeholder="Logradouro" required>
+                <label for="address"></label>
+            </div>
+            <div class="inputbox">
+                <input class="inputForm" type="text" name="referencePoint" id="referencePoint" placeholder="Ponto de referencia" required>
+                <label for="number"></label>
+            </div>
+
+            <div class="inputbox">
+                <input class="inputForm" type="text" name="neighborhood" id="neighborhood" placeholder="Bairro" required>
+                <label for="neighborhood"></label>
+            </div>
+            <div class="inputbox">
+                <input class="inputForm" type="text" name="city" id="city" placeholder="Cidade" required>
+                <label for="city"></label>
+            </div>
+            <div class="inputbox">
+                <input class="inputForm" type="text" name="state" id="estate" placeholder="Estado" required>
+                <label for="estate"></label>
+            </div>
+        </div>
+        <div class="row1">
+        <div class="row">
+
+        </div>
+        </section>
+    <div id="btn1">
+        <button id="btn1" type="submit" class="registrationButton">Cadastre-se
+            <i class="fa-solid fa-address-card"></i>
+        </button>
+
+    </div>
+    </div>
+    </form>
+
+    </main>
+    <footer>
+        <img src="/img/Logo@2x.png" alt="">
+        <div class="info">
+            <span>DH - Digital House</span>
+            <span>Av. Domingos Odália Filho, 301, Osasco - SP</span>
+            <span>(11) 4858-4656</span>
+            <span>alunos@digitalhouse.com</span>
+        </div>
+    
+        <div class="info" id="info">
+            <p>Quem somos nós</p>
+            <p>Nossas redes sociais:</p>
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

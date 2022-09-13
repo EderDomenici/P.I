@@ -1,0 +1,204 @@
+<body>
+
+    <header>HEADER</header>
+    
+        <div class="meusdados-container">
+    
+            <div class="navigation">
+                <ul>
+                    <li class="list active">
+                        <a href="#">
+                       <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                       <span class="title">Home</span>
+                         </a>
+                     </li>
+                     <li class="list">
+                         <a href="#">
+                              <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                             <span class="title">Meus Dados</span>
+                         </a>
+                     </li>
+                     <li class="list">
+                         <a href="#">
+                             <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                              <span class="title">Meus Pedidos</span>
+                          </a>
+                       </li>
+                      <li class="list">
+                          <a href="#">
+                             <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                             <span class="title">Atendimento ao Cliente</span>
+                         </a>
+                     </li>
+                </ul>
+        
+              </div>
+              
+    
+              <form action="">
+    
+                <div class="form">
+                    <div class="meusdados-titulo">
+                        <div>
+                            <ion-icon name="document-text"></ion-icon>
+                        </div>
+    
+                        <div>
+                            <h3>Meus dados</h3>
+                        </div>
+    
+                        <div>
+                            <input class="button" type="button" value="Alterar Senha">
+                        </div>
+    
+                    </div>
+    
+                    <div class="anim-form">
+                        <input type="text" name="nome" id="nome" required>
+                        <label for="nome">
+                            <span>
+                                Nome
+                            </span>
+    
+                        </label>
+                    </div>
+      
+                    <div class="anim-form">
+                        <input type="email" name="email" id="email">
+                        <label for="email">
+                            <span id="login">
+                                Email/Login
+                            </span>
+                        </label>
+      
+                    </div>
+      
+                    <div class="anim-form">
+                        <input type="number" name="cpf" id="cpf">
+                        <label for="cpf">
+                            <span id="lcpf">
+                                CPF
+                            </span>     
+                        </label>
+      
+                    </div>
+      
+                    <div class="anim-form">
+                        <input type="number" name="rg" id="rg">
+                        <label for="rg">
+                            <span id="lrg">
+                                RG
+                            </span>
+                        </label>
+      
+                    </div>
+    
+                    <div class="form-radio">
+                        <input type="radio" name="sexo" id="masc">
+                        <label for="sexo">Masculino</label>
+                        <input type="radio" name="sexo" id="fem">
+                        <label for="sexo">Feminino</label>
+                        <input type="radio" name="sexo" id="udf">
+                        <label for="sexo">Não informar</label>
+                        
+                    </div>
+    
+                    <div class="anim-form">
+                        <input type="date" name="nasc" id="">
+                        <label for="nasc">
+                            <span id="lniver">
+                                Aniversario
+                            </span>
+                        </label>
+                    </div>
+    
+                    <div class="anim-form">
+                        <input type="number" name="fone" id="">
+                        <label for="fone">
+                            <span id="lcel">
+                                Celular
+                            </span>
+                        </label>
+                    </div>
+    
+                    <div>
+                        <input class="button" type="button" value="Salvar">
+                    </div>
+      
+                </div>      
+              </form>
+    
+    
+              <div class="list-enderco">
+                  <div>
+                    <ion-icon name="location-outline"></ion-icon>
+                      <span>Endereços</span>
+                  </div>
+    
+                  <div>
+                      <span>Endereços Principal</span>
+                  </div>
+    
+                  <div>
+                      <span>Rua</span>
+                      <span>Numero, Logradouro</span>
+                      <span>CEP - Cidade</span>
+                  </div>
+    
+                  <input class="button" type="button" value="Novo Endereço">
+    
+    
+              </div>
+             
+        </div>
+    
+    
+    
+        
+          
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+          
+    
+    
+    
+    
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item)=>
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+    
+                list.forEach((item)=>
+                item.addEventListener('click', activeLink));
+        </script>
+    
+    </body>

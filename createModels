@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Create model Customer
+npx sequelize model:generate --name Customer --attributes name:STRING,lastName:STRING,admin:BOOLEAN,email:STRING,password:STRING,phone:STRING,birthDay:STRING,cpf:STRING,address:STRING,complementary:STRING,neighborhood:STRING,city:STRING,state:STRING,cep:STRING,referencePoint:STRING
+
+# Create model Credit Card
+npx sequelize model:generate --name CreditCard --attributes numberCard:INTEGER,expDate:STRING,cvv:INTEGER,nameCard:STRING,cpf:STRING,customerId:INTEGER
+
+# Create model Category
+npx sequelize model:generate --name Category --attributes name:STRING
+
+# Create model Specification
+npx sequelize model:generate --name Specification --attributes productId:INTEGER,size:FLOAT,model:STRING,description:TEXT,color:STRING,follow:TEXT
+
+# Create model Brand
+npx sequelize model:generate --name Brand --attributes brandName:STRING
+
+# Create model Product
+npx sequelize model:generate --name Product --attributes name:STRING,price:FLOAT,weight:FLOAT,categoryId:INTEGER,brandID:INTEGER,specificationId:INTEGER,amount:INTEGER
+
+# Create model Order Status
+npx sequelize model:generate --name OrderStatus --attributes statusName:STRING
+
+# Create model Shippment Status
+npx sequelize model:generate --name ShippmentStatus --attributes shipStatusName:STRING
+
+#Create model Payment
+npx sequelize model:generate --name Payment --attributes paymentName:STRING
+
+# Create model Order
+npx sequelize model:generate --name Order --attributes order:STRING,customerId:INTEGER,paymentId:INTEGER,productId:INTEGER,quantity:INTEGER,statusId:INTEGER,statusShippId:INTEGER
+
+# Create model Inventory
+npx sequelize model:generate --name Inventory --attributes productId:INTEGER,quantity:INTEGER,avaible:BOOLEAN
+
+npx sequelize-cli db:migrate:all

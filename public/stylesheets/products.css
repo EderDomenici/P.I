@@ -1,0 +1,373 @@
+*
+{
+margin: 0;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Libre Baskerville', serif;
+}
+
+nav
+{
+  background-image: linear-gradient(#4acee6,rgb(74 206 210 / 0%));
+}
+
+main
+{
+  height: 100vh;
+  padding: 5px;
+  margin: 5px;
+}
+
+ul, li
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.313rem;
+  text-decoration: none;
+}
+
+header
+{
+    height: 14.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-bar
+{
+    height: 2.125rem;
+    width: 26.625rem;
+    background-color: white;
+}
+
+.main
+{
+    top: 10px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    /* gap: 0.9375rem; */
+    margin-bottom: 6.25rem;
+    max-height: 37.5rem;
+}
+
+.group-small-images
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.small-image
+{
+    width: 4.375rem;
+    height: 4.375rem;
+    background-color: white;
+    border: 0.0625rem solid rgb(70, 70, 70);
+}
+
+.small-image img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.small-image:hover
+{
+    border: 0.3125rem solid rgba(196,19,167,.6);
+}
+
+.product-image
+{
+    background-color: white;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    width: 50rem;
+    /* border: 0.0625rem solid rgb(70, 70, 70); */
+}
+
+.product-image img
+{
+    top: 5px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 37.5rem;
+    object-fit: contain;
+    /* padding: 3.125rem; */
+}
+
+.product-details
+{
+    background-color: white;
+    width: 21.875rem;
+    height: 37.5rem;
+    border-radius: 0.9375rem;
+    border: 0.0625rem solid rgb(70, 70, 70);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.product-name
+{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 1.875rem 18px 0.625rem;
+}
+
+.product-details .stars
+{
+    margin-left: 1.25rem;
+}
+
+.product-details .price
+{
+    margin: 0.625rem 0 0 1.25rem;
+}
+
+.product-details .product-description
+{
+    text-align: left;
+    max-height: 9.375rem;
+    margin: 0px 2.5rem 0 1.25rem;
+    overflow: hidden;
+}
+
+.product-details-buttons
+{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21.875rem;
+    height: 12.5rem;
+}
+
+.product-details .add-cart
+{
+    font-size:15px;
+    font-family:Arial;
+    width: 14.5rem;
+    height: 2.125rem;
+    margin: 0.625rem auto 0;
+    left: 50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#599bb3;
+    font-weight:bold;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:8px;
+    box-shadow: 0px 10px 14px -7px #276873;
+    text-shadow: 0px 1px 0px #3d768a;
+    background:linear-gradient(#599bb3, #408c99);
+}
+
+.product-details .buy-now
+{
+        font-size:15px;
+        font-family:Arial;
+        width: 14.5rem;
+        height: 2.125rem;
+        margin: 0.625rem auto 0;
+        left: 50px;
+        border-width:1px;
+        color:#fff;
+        border-color:#599bb3;
+        font-weight:bold;
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+        border-bottom-left-radius:8px;
+        border-bottom-right-radius:8px;
+        box-shadow: 0px 10px 14px -7px #276873;
+        text-shadow: 0px 1px 0px #3d768a;
+        background:linear-gradient(#599bb3, #408c99);
+}
+
+.add-cart:hover, .buy-now:hover
+{
+    cursor: pointer;
+}
+
+.line
+{
+    width: 87.5rem;
+    height: 0px;
+    border-bottom: 0.0625rem solid rgb(70, 70, 70);
+    margin: 2.5rem auto;
+}
+
+.related-title
+{
+    font-size: 1.875rem;
+    color: black;
+    text-align: center;
+    padding: 1.875rem 0px;
+}
+
+.related-main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.375rem;
+    padding-bottom: 1.875rem;
+    margin-top: 2.5rem;
+}
+
+.related-product
+{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 9.375rem;
+    background-color: white;
+    /* border: 0.0625rem solid rgb(70, 70, 70); */
+    border-radius: 0.9375rem;
+    /* overflow: hidden; */
+    justify-content: center;
+    align-items: center;
+}
+
+.related-product .related-text
+{
+    margin: auto;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    padding-left: 0.9375rem;
+    min-width: 9.375rem;
+}
+
+.related-product .related-image img
+{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-1
+{
+    display: flex;
+    justify-content: center;
+}
+
+.img-1
+{
+    max-width: 100%;
+    height: 37.5rem;
+    object-fit: contain;
+    margin-top: 6.25rem;
+}
+
+.ad-sub-title
+{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    margin-top: 1.875rem;
+}
+
+.ad-text
+{
+    font-size: 1.25rem;
+    text-align: center;
+    width: 43.75rem;
+    margin: 1.875rem auto 0;
+}
+
+.img-2
+{
+    max-width: 100%;
+    height: 50rem;
+    object-fit: contain;
+    margin-top: 6.25rem;
+    margin-bottom: 4.375rem;
+}
+
+.information-title
+{
+    font-size: 1.875rem;
+    color: black;
+    text-align: center;
+    padding: 1.875rem 0px;
+}
+
+.information-table
+{
+    border-spacing: 0;
+    width: 87.5rem;
+    margin: 1.875rem auto 6.25rem;
+}
+
+.information-table td
+{
+    width: 50%;
+    vertical-align: middle;
+    /* border-bottom: 0.0625rem solid #ddd; */
+    font-size: 1.25rem;
+    height: 3.125rem;
+    padding-left: 1.25rem;
+    border: 0.0625rem solid rgb(66, 66, 66);
+}
+
+tr:nth-child(even) {background-color: #cdcdcd;}
+
+tr:nth-child(odd) {background-color: white;}
+
+footer
+{
+    height: 15.1875rem;
+    background: linear-gradient(0deg, rgba(196,19,167,.6) 0%, #fefefe 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img
+{
+    margin-left: 3rem;
+    border-radius: 1.25;
+    height: 10.1875rem;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 400;
+    line-height: 1.875rem;
+    text-align: justify;
+    color: black;
+}
+
+#info
+{
+    gap: 1.25rem;
+}
+
+.social_media
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer a
+{
+    color: inherit;
+}

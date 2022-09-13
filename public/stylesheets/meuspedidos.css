@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:wght@600&family=Roboto:wght@500&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+header{
+    height: 12.5rem;
+}
+
+
+.meuspedidos-container{
+    width: 100vw;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.meuspedidos-lista{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-span{
+    display: flex;
+    flex-direction: column;
+    gap: 0.938rem;
+}
+
+.titulo{
+    display: flex;
+    gap: 0.625;
+}
+
+#icone{
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.navigation{
+    position: relative;
+    height: 29.375rem;
+    width: 4.375rem;
+
+    background: #424242;
+    box-shadow: 0.625 0 0 rgb(196,19,167);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.navigation:hover{
+    width: 18.75rem;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0.313rem;
+    padding-top: 2.5rem;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    border-left: 0.625 solid #424242;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 3.75rem;
+    height: 3.75rem;
+    text-align: center;
+    line-height: 4.375rem;
+}
+
+.navigation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 0.625;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    white-space: nowrap;
+}
+
+.navigation ul li.active{
+    background: rgb(196,19,167);
+}
+
+.navigation ul li.active a::before{
+    content: '';
+    position: absolute;
+    top: -1.875rem;
+    right: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 0.938rem 0.938rem 0 linear-gradient(0deg, rgba(196,19,167,1) 0%, rgba(75,187,203,1) 100%);
+}
+
+.navigation ul li.active a::after{
+    content: '';
+    position: absolute;
+    bottom: -1.875rem;
+    right: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 0.938rem -0.938rem 0 rgb(196,19,167);
+}

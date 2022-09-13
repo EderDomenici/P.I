@@ -1,0 +1,255 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+}
+nav{
+background-image: linear-gradient(rgb(74, 206, 230,1),rgb(74 206 210 / 0%));
+}
+.logo{
+  width: 3.9375rem;
+  height: 4.0625rem;
+  top: -131rem;
+  left: 54.8125rem;
+}
+#buscar{
+position: relative;
+display:block;
+width: 70vw;
+height: 3vh;
+border-radius: 0.625rem;
+font-size: 0.875rem;
+cursor: pointer;
+color: rgb(2,2,2);
+background-color: rgba(230, 241, 240);
+line-height: 0.625rem;
+}
+#botao{
+font-size: 0.875rem;
+cursor: pointer;
+outline: 0;
+background: 0 0;
+border: none;
+line-height: 0.0625rem;
+width: auto;
+height: 3vh;
+opacity: 0;
+}
+
+ul, li{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.625rem;
+text-decoration: none;
+width: auto;
+}
+.lupa{
+margin-left: -0.75rem;
+width: 1.875rem;
+height: 2rem;
+margin-top: 0.9375rem;
+}
+body{
+background-color: #fefefe;
+transition: background 0.5s linear, color 0.5s linear;
+}
+
+#chck{
+/* background-color: #232c35; */
+border-radius: 50%;
+display: inline-block;
+width: 2.5rem;
+height: 2.5rem;
+cursor: pointer;
+user-select: none;
+transition: background 0.5s linear;
+}
+
+
+.main
+{
+display: flex;
+}
+.slider
+{
+margin: 0 auto;
+width: 50rem;
+height: 25rem;
+overflow: hidden;
+}
+.slides
+{
+width: 400%;
+height: 25rem;
+display: flex;
+}
+.slides input
+{
+display: none;
+}
+.slide
+{
+width: 25%;
+position: relative;
+transition: 2s;
+}
+.slide img
+{
+width: 100%;
+}
+.manual-navigation
+{
+position: absolute;
+width: 36.25rem;
+margin-top: -5.8125rem;
+margin-left: 0.0625rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.manual-btn
+{
+border: 0.125rem solid black;
+padding: 0.3125rem;
+border-radius: 0.625rem;
+cursor: pointer;
+transition: 1s;
+}
+.manual-btn:not(:last-child)
+{
+margin-right: 2.8125rem;
+}
+.manual-btn:hover
+{
+background-color: black;
+}
+#radio1:checked ~ .first
+{
+margin-left: 0;
+}
+#radio2:checked ~ .first
+{
+margin-left: -25%;
+}
+#radio3:checked ~ .first
+{
+margin-left: -50%;
+}
+#radio4:checked ~ .first
+{
+margin-left: -75%;
+}
+.navigation-auto div
+{
+border: 0.125rem solid black;
+padding: 0.3125rem;
+border-radius: 0.625rem;
+cursor: pointer;
+transition: 1s;
+}
+.navigation-auto
+{
+position: absolute;
+width: 36.375rem;
+margin-top: 19.1875rem;
+display: flex;
+justify-content: center;
+}
+.navigation-auto div:not(:last-child)
+{
+margin-right: 2.8125rem;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1
+{
+background-color: black;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2
+{
+background-color: black;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3
+{
+background-color: black;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4
+{
+background-color: black;
+}
+.card
+{
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  border-radius: 0.625rem;
+  width: 13.125rem;
+  height: 12.5rem;
+  padding: 0.25rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+.card:hover
+{
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+.container
+{
+  padding: 0.125rem 1rem;
+}
+.card img
+{
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  width: 6.25rem;
+  height: 8.125rem;
+  align-items: center;
+}
+#gallery
+{
+  display:flex;
+  grid-template-columns: repeat(8, 2fr);
+  grid-template-rows: repeat(8, 3vw);
+  grid-gap: 0.9375rem;
+  padding: 0.625rem;
+  padding-top: 3.125rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#gallery2
+{
+  display: flex;
+  grid-template-columns: repeat(8, 2fr);
+  grid-template-rows: repeat(8, 3vw);
+  grid-gap: 0.9375rem;
+  padding: 0.625rem;
+  padding-top: 3.125rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer
+{
+  background-image: linear-gradient(rgb(74, 206, 230,1),rgb(74 206 210 / 0%));
+}
+a{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 23.4375rem)
+{
+.nav{
+display: flex;
+flex-wrap: wrap;
+}
+.carrossel
+{
+display: flex;
+width: 80%;
+}
+}

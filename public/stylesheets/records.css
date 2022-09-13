@@ -1,0 +1,65 @@
+.records
+{
+    width: 100%;
+    user-select: none;
+    text-align: center;
+}
+
+.records th
+{
+    height: 3.125rem;
+    background-color: var(--primary-color);
+    /* padding-left: 1.25rem; */
+    font-size: 1.2rem;
+    color: white;
+}
+.records td
+{
+    height: 3.125rem;
+    /* padding-left: 1.25rem; */
+}
+
+.records th:last-child,
+.records td:last-child
+{
+    padding: 0;
+    min-width: 8.75rem;
+    text-align: center;
+}
+
+.records tr:hover
+{
+    background-color: var(--secundary-color);
+}
+
+@media(max-width:30rem)
+{
+    .records
+    {
+        border-spacing: 0.3125rem;
+    }
+    .records thead
+    {
+        display:none;
+    }
+    .records tr
+    {
+        box-shadow: 0 0.0625rem 0.1875rem var(--shadow-color);
+    }
+    .records td:not(:first-child)
+    {
+        display:flex;
+        justify-content: space-between;
+        padding: 0 1.25rem;
+    }
+
+    .records td
+    {
+        margin:0.625rem 0;
+    }
+
+    .records tr:hover
+    {
+        background-color: inherit;
+    }
+}

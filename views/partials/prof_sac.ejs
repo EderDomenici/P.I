@@ -1,0 +1,212 @@
+<body>
+
+    <header>HEADER</header>
+
+
+    <div class="sac-container">
+
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#">
+                   <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                   <span class="title">Home</span>
+                     </a>
+                 </li>
+                 <li class="list">
+                     <a href="#">
+                          <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                         <span class="title">Meus Dados</span>
+                     </a>
+                 </li>
+                 <li class="list">
+                     <a href="#">
+                         <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                          <span class="title">Meus Pedidos</span>
+                      </a>
+                   </li>
+                  <li class="list">
+                      <a href="#">
+                         <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                         <span class="title">Atendimento ao Cliente</span>
+                     </a>
+                 </li>
+            </ul>
+    
+          </div>
+
+          <div class="sac">
+
+              <div class="titulo">
+                  <div>
+                    <ion-icon id='icone' name="chatbubble-ellipses-outline"></ion-icon>    
+                  </div>
+
+                  <div>
+                      <h3>Atendimento ao Cliente</h3>
+                  </div>
+
+              </div>
+
+              <div>
+                  <p>Dúvidas? Mande uma mensagem em nossos canais de atendimento, logo entraremos em contato</p>
+
+              </div>
+
+              <div class="links">
+                  <div class="chat">
+                      <div class="subchat">
+                          <div>
+                            <ion-icon id='icone2'name="chatbubbles-outline"></ion-icon>
+
+                          </div>
+
+                          <div>
+                              <h4>Chat instantâneo de atendimento</h4>
+
+                              <p>Segunda à sábado das 8:00 às 20:00 <br>
+                                Horário de Brasília (UTC -3) <br>
+                                Exceto domingo e feriados</p>
+                          </div>
+
+                      </div>
+
+                      <div class="subchat">
+
+                          <div>
+                              <span>Online</span>
+                          </div>
+
+                          <div>
+                              <input type="button" value="Iniciar Atendimento">
+                          </div>
+
+                      </div>
+
+                  </div>
+
+                  <div class="chat">
+                      <div class="subchat">
+                          <div>
+                            <ion-icon id='icone2' name="call-outline"></ion-icon>
+                          </div>
+
+                          <div>
+
+                            <h4>Chat instantâneo de atendimento</h4>
+
+                            <p>Segunda à sábado das 8:00 às 20:00 <br>
+                              Horário de Brasília (UTC -3) <br>
+                              Exceto domingo e feriados</p>
+                          </div>
+                      </div>
+
+
+                      <div class="subchat">
+
+                        <div>
+                            <span>Online</span>
+                        </div>
+
+                        <div>
+                           <h4>4002-8922</h4>
+                        </div>
+
+                    </div>                     
+
+                  </div>
+
+
+              </div>
+
+              <div class="email">
+
+                  <div>
+                    <ion-icon id='icone2' name="mail-outline"></ion-icon>
+                  </div>
+
+                  <div>
+                      <h4>E-mail de Contato</h4>
+
+                      <span>Você pode entrar em contato pelo e-mail: <a href="">faleconosco@sea.com</a></span>
+                  </div>
+
+              </div>
+
+
+              <div class="protocolos">
+
+                  <div class="menu">
+                      <div class="prot-tit">
+    
+                          <div>
+                            <ion-icon id='icone2' name="receipt-outline"></ion-icon>
+                          </div>
+    
+                          <div>
+                              <h3>Protocolos</h3>
+                          </div>
+                          
+                      </div>
+    
+                      <div class="prot-list">
+
+                          <span>Todos</span>
+                          <span>Abertos</span>
+                          <span>Finalizados</span>
+                      </div>
+
+                  </div>
+
+                  
+                  
+                </div>
+                
+                <div class="solicit">
+                    <span>Acompanhe suas solicitações</span>
+                </div>
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink(){
+            list.forEach((item)=>
+            item.classList.remove('active'));
+            this.classList.add('active');
+        }
+
+            list.forEach((item)=>
+            item.addEventListener('click', activeLink));
+    </script>
+
+
+
+
+</body>

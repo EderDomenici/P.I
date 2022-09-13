@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:wght@600&family=Roboto:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+header
+{
+    height: 12.5rem;
+}
+
+.navigation
+{
+    position: relative;
+    height: 29.375rem;
+    width: 4.375rem;
+
+    background: #424242;
+    box-shadow: 0.625rem 0 0 #c413a7;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.navigation:hover
+{
+    width: 18.75rem;
+}
+
+.navigation ul
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 0.313rem;
+    padding-top: 2.5rem;
+}
+
+.navigation ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    border-left: 0.625rem solid #424242;
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 3.75rem;
+    height: 3.75rem;
+    text-align: center;
+    line-height: 4.375;
+}
+
+.navigation ul li a .icon ion-icon
+{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    padding-left: 0.625rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    white-space: nowrap;
+}
+
+.navigation ul li.active
+{
+    background: rgb(196,19,167);
+}
+
+.navigation ul li.active a::before
+{
+    content: '';
+    position: absolute;
+    top: -1.875rem;
+    right: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 0.938rem 0.938rem 0 linear-gradient(0deg, rgba(196,19,167,1) 0%, rgba(75,187,203,1) 100%);
+}
+
+.navigation ul li.active a::after
+{
+    content: '';
+    position: absolute;
+    bottom: -1.875rem;
+    right: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 0.938rem -0.938rem 0 rgb(196,19,167);
+}
+
+
+.sac-container
+{
+    display: flex;
+    gap: 5%;
+}
+
+.sac
+{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo
+{
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#icone
+{
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.links
+{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    gap: 7%;
+}
+
+.chat
+{
+    display: flex;
+    gap: 2%;
+}
+
+.subchat
+{
+    display: flex;
+    gap: 0.313rem;
+}
+
+
+.email
+{
+    margin-top: 5%;
+    display: flex;
+    gap:0.625rem
+}
+
+.protocolos
+{
+    display: flex;
+    gap: 0.313rem;
+    margin-top: 3%;
+}
+
+.prot-tit
+{
+    display: flex;
+    gap: 0.625rem;
+}
+
+.menu
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prot-list
+{
+    display: flex;
+    gap: 0.625rem;
+}
+
+.solicit
+{
+    margin-top: 2%;
+    display: block;
+    border-bottom: 0.031ewm solid;
+}
+
+#icone2
+{
+    height: 1.563rem;
+    width: 1.563rem;
+}

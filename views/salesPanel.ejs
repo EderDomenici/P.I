@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/button.css">
+    <link rel="stylesheet" href="/stylesheets/records.css">
+    <link rel="stylesheet" href="/stylesheets/modal.css">
+    <title>Painel de Vendas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Painel de Vendas</h1>
+    </header>
+    <main>
+
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Numero do Pedido</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+ <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
+                        required>
+                    <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                    <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
+                    <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Aprovar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <img src="/img/Logo.png" alt="">
+      <div class="info">
+          <span>DH - Digital House</span>
+          <span>Av. Domingos Odália Filho, 301, Osasco - SP</span>
+          <span>(11) 4858-4656</span>
+          <span>alunos@digitalhouse.com</span>
+      </div>
+
+      <div class="info" id="info">
+          <p>Quem somos nós</p>
+          <p>Nossas redes sociais:</p>
+          <div class="social_media">
+              <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-square fa-xl"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+          </div>
+      </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/products.css">
+    <link rel='stylesheet' href="../public/stylesheets/public/navbar.css">
+    <link rel="stylesheet" href="../public/stylesheets/public/footer.css">
+    <link rel="stylesheet" href="../public/stylesheets/public/search.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/794f38cff9.js" crossorigin="anonymous"></script>
+    <title><%= title %></title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <img src="../public/img/Logo@2x.png" id='logo' alt="Logo">
+            </li>
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Buscar...">
+            </div>
+            <li>
+                <div class='ball'><a href='http://localhost:3000/customer'><i class="fa-solid fa-user"></i></a></div>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+        </ul>
+    </nav>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Home</a></li>
+          <li><a class='dropdown-arrow' href='http://'>Produtos</a>
+            <ul class='sub-menus'>
+              <li><a href='http://'>Smartphone</a></li>
+              <li><a href='http://'>Acessórios</a></li>
+              <li><a href='http://'>Tablet</a></li>
+            </ul>
+          </li>
+          <li><a href='http://'>Ofertas</a></li>
+          <li><a href='http://'>Categoria</a></li>
+        </ul>
+      </nav>
+
+    <div class="main">
+        <div class="group-small-images">
+            <div class="small-image" id="s-i-3">
+                <img src="../public/img/img2.png" alt="">
+            </div>
+            <div class="small-image" id="s-i-4">
+                <img src="../public/img/img8.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="product-image">
+            <img src = "../public/img/img3.png" id="image-test" alt="">
+        </div>
+
+        <div class="product-details">
+            <div class="product-details-top">
+                <h2 class="product-name">Smartwhatch</h2>
+                <div class="stars">
+                    <img src="../img/products/Star 1.svg" alt="star" class="star">
+                    <img src="../img/products/Star 1.svg" alt="star" class="star">
+                    <img src="../img/products/Star 1.svg" alt="star" class="star">
+                    <img src="../img/products/Star 1.svg" alt="star" class="star">
+                    <img src="../img/products/Star 1.svg" alt="star" class="star">
+                </div>
+
+                <p class="price">R$600,00</p>
+            </div>
+
+            <p class="product-description">Novo Kindle Paperwhite: agora com tela de 6,8” e bordas mais finas, temperatura de luz ajustável, bateria com duração de até 10 semanas e 20% mais rápido para virar as páginas.</p>
+
+            <div class="product-details-buttons">
+                <form action="/carrinho" method="post">
+                    <button  class="add-cart" name="add-card">Adicionar ao carrinho</button>
+                </form>
+                <form action="/payment" method="get">
+                    <button class="buy-now" name="buy-now">Comprar agora</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="line"></div>
+
+    <h2 class="information-title">Informações técnicas</h2>
+
+    <table class="information-table">
+        <tr>
+            <td>Modelo</td>
+            <td>TV</td>
+        </tr>
+        <tr>
+            <td>Cor</td>
+            <td>Preto</td>
+        </tr>
+        <tr>
+            <td>Peso</td>
+            <td>1kg</td>
+        </tr>
+        <tr>
+            <td>Modelo</td>
+            <td>TV</td>
+        </tr>
+        <tr>
+            <td>Cor</td>
+            <td>Preto</td>
+        </tr>
+        <tr>
+            <td>Peso</td>
+            <td>1kg</td>
+        </tr>
+        <tr>
+            <td>Modelo</td>
+            <td>TV</td>
+        </tr>
+        <tr>
+            <td>Cor</td>
+            <td>Preto</td>
+        </tr>
+        <tr>
+            <td>Peso</td>
+            <td>1kg</td>
+        </tr>
+    </table>
+
+    <footer>
+        <img src="../public/img/Logo@2x.png" alt="">
+        <div class="info">
+            <span>DH - Digital House</span>
+            <span>Av. Domingos Odália Filho, 301, Osasco - SP</span>
+            <span>(11) 4858-4656</span>
+            <span>alunos@digitalhouse.com</span>
+        </div>
+
+        <div class="info" id="info">
+            <p>Quem somos nós</p>
+            <p>Nossas redes sociais:</p>
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-square fa-xl"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../script/products.js"></script>
+
+</body>
+</html>

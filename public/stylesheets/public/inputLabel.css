@@ -1,0 +1,11 @@
+.css-input {
+    font-size:1rem;
+    border-color:#cccccc;
+    padding:0.75rem; border-width:0.125rem;
+    border-radius:0.813rem; border-style:solid;
+    text-shadow:0px 0px 0px #2a2a2abd;
+    box-shadow: 0px 0px 0.313rem 0px #50cee6;
+}
+.css-input:focus {
+    outline:none;
+}
