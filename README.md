@@ -7,3 +7,15 @@ CSS E HTML PURO COM EJS PARA CONSUMO DE DADOS DO BACKEND.
 HISTORICO DE COMMITS E VERSÕES:
 
 https://github.com/PI-Digital-House/Ecommerce
+
+
+#==============================================================================================================================================================================#
+
+THE PROJECT WAS THE OBJECTIVE OF SIMULATING THE CONSTRUCTION OF AN ECOMMERCE, WHERE I WAS IN CHARGE OF CREATING THE ENTIRE BACKEND WITH NODE.JS, EXPRESS, MYSQL, SEQUELIZE.
+
+WITHOUT SERVER/CLIENT AND REACT. IT WAS NOT NECESSARY TO CREATE THE BACKEND AS AN API, FOR CONSUMPTION AND COMMUNICATION.
+
+PURE CSS AND HTML WITH EJS FOR BACKEND DATA CONSUMPTION.
+
+
+https://github.com/PI-Digital-House/Ecommerce
